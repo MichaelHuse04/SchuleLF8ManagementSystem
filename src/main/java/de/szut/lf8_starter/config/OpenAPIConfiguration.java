@@ -25,7 +25,6 @@ public class OpenAPIConfiguration {
 
     @Bean
     public OpenAPI springShopOpenAPI(
-            //  @Value("${info.app.version}") String appVersion,
     ) {
         final String securitySchemeName = "bearerAuth";
 

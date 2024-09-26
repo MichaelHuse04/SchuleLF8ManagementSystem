@@ -32,12 +32,6 @@ class KeycloakSecurityConfig {
     private static final String REALM_ACCESS_CLAIM = "realm_access";
     private static final String ROLES_CLAIM = "roles";
 
-    private final KeycloakLogoutHandler keycloakLogoutHandler;
-
-    KeycloakSecurityConfig(KeycloakLogoutHandler keycloakLogoutHandler) {
-        this.keycloakLogoutHandler = keycloakLogoutHandler;
-    }
-
     @Bean
     public SessionRegistry sessionRegistry() {
         return new SessionRegistryImpl();
