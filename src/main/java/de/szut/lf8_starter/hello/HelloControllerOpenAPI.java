@@ -3,6 +3,7 @@ package de.szut.lf8_starter.hello;
 import de.szut.lf8_starter.hello.dto.HelloCreateDto;
 import de.szut.lf8_starter.hello.dto.HelloGetDto;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -30,7 +31,7 @@ public interface HelloControllerOpenAPI {
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "list of hellos",
                     content = {@Content(mediaType = "application/json",
-                            schema = @Schema(implementation = HelloGetDto.class))}),
+                            array = @ArraySchema(schema = @Schema(implementation = HelloGetDto.class)))}),
             @ApiResponse(responseCode = "401", description = "not authorized",
                     content = @Content)})
     List<HelloGetDto> findAll();
