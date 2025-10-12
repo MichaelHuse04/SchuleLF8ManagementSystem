@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
@@ -31,5 +32,16 @@ public class ProjectEntity {
 
     @ManyToOne
     private CustomerEntity customer;
+
+    private Long responsibleEmployeeId;
+
+    @ElementCollection
+    @CollectionTable(
+            name = "project_employees",
+            joinColumns = @JoinColumn(name = "projectID")
+    )
+    @Column(name = "employee_number")
+    private List<Long> assingedEmployees;
+
 
 }
