@@ -5,6 +5,8 @@ import de.szut.lf8_starter.customer.CustomerEntity;
 import de.szut.lf8_starter.customer.CustomerRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ProjectService {
 
@@ -41,5 +43,22 @@ public class ProjectService {
             }
         }
         return projectRepository.save(projectEntity);
+    }
+
+    public List<ProjectEntity> getAll(){
+        return this.projectRepository.findAll();
+    }
+
+    public ProjectEntity getById(Long id){
+        return this.projectRepository.findById(id).orElse(null);
+    }
+
+    public void  delete(Long id){
+        ProjectEntity projectEntity = this.projectRepository.findById(id).orElse(null);
+        if (projectEntity == null) {
+            throw new IllegalArgumentException("Project not found");
+        }else{
+            this.projectRepository.delete(projectEntity);
+        }
     }
 }

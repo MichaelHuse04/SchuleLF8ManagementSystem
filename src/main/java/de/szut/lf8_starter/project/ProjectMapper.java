@@ -2,6 +2,7 @@ package de.szut.lf8_starter.project;
 
 import de.szut.lf8_starter.customer.CustomerEntity;
 import de.szut.lf8_starter.project.dto.ProjectCreateDto;
+import de.szut.lf8_starter.project.dto.ProjectGetDto;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -10,6 +11,10 @@ public class ProjectMapper {
 
     public ProjectMapper() {
 
+    }
+
+    public ProjectGetDto mapToGetProjectDto(ProjectEntity projectEntity) {
+        return new ProjectGetDto(projectEntity.getId());
     }
 
     public ProjectEntity mapCreateDtoToEntity(ProjectCreateDto dto) throws Exception {
