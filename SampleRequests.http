@@ -1,6 +1,4 @@
-@token = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUFQ0dldiNno5MnlQWk1EWnBqT1U0RjFVN0lwNi1ELUlqQWVGczJPbGU0In0.eyJleHAiOjE3NjAyNzEzMjIsImlhdCI6MTc2MDI2NzcyMiwianRpIjoiYjI5YjJiMWQtOTBmYS00M2QxLWJjN2EtNzRlNWQwNzg3ZDhmIiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zenV0LmRldi9hdXRoL3JlYWxtcy9zenV0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU1NDZjZDIxLTk4NTQtNDMyZi1hNDY3LTRkZTNlZWRmNTg4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVtcGxveWVlLW1hbmFnZW1lbnQtc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiJkNGNmZTMzOS1jZDI4LTQ1YjQtYjE2MC1hZjk2ODg4N2E5NWQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicHJvZHVjdF9vd25lciIsIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zenV0IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIifQ.BqfiFO6F0WaiFlMxI8e3JimV3Z24WgO_M8nvuGTFik35JkUsBGxwCvimOVJWD9W_1XxpFZv5gbJ-eTOmoCb_U9tMG3ukO6Y62pcJwAYfzem1jsXneaik0HJ_1zmGBRtqWbwn8kyBGMsJg4MgOO1hdQ6B3Hcr2sE4pUADYS9aUxGIxSnoyRCfTbZUa-6xV4_bWVqO4rOlguNBm9QRb6adqJoZrQcClnprITc5WXTVNdrOrcIkeP7wwJtOgJTHkp6mtJk0zrGGLn3upwb3MujxErYY5wAfCg-ARxIkM0MY-irisaAvkTz2IakSRXro0C2aQ3QVgqUWwyGKrlEiVCvtNw
-###
-GET localhost:8080/welcome
+@token = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUFQ0dldiNno5MnlQWk1EWnBqT1U0RjFVN0lwNi1ELUlqQWVGczJPbGU0In0.eyJleHAiOjE3NjA4MDA2MDIsImlhdCI6MTc2MDc5NzAwMiwianRpIjoiYjlmYWJkZjUtMWMzMS00NzE0LWI2ZDMtYzUzZjk4YjZkMjM2IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zenV0LmRldi9hdXRoL3JlYWxtcy9zenV0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU1NDZjZDIxLTk4NTQtNDMyZi1hNDY3LTRkZTNlZWRmNTg4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVtcGxveWVlLW1hbmFnZW1lbnQtc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiJlNDgwNzA2Mi00MDBmLTQ0YTItOGFkMS02YTNiOTRlMDVkNzciLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicHJvZHVjdF9vd25lciIsIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zenV0IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIifQ.PApSNOgWt_9lX-vw5KpHdSeaJsblf9zZc-IRbI59wXW9OlZ8tO2TA9Ogsap8S6Uy6u7CcykA1QV-VnvadDZ83-v6nQ7r8j2z7Jom-FSMN2F7MdcuJvcIpxRktYRtumJr6Njxc1kg0BIv5Msgeyocfzo-Uu0UXCvFmO_WBr4GnLm7_JUDAkQUNmIdNIEdrbo14AXiiGox6a_BAEVlZ77InCUDIFQi-0NNg4OTegzyDDiSCxVX1R6NApsfH8iDO9ewf38H0U8P5eioptujUXbc3T9vuGT23Sow46U_vGP7Il0KLgXsGcFWFyoZ-XeO3o_s8mvUf85q9fxJabDty2zNGA
 
 ###
 GET localhost:8080/roles
@@ -16,11 +14,76 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "message": "zifl"
+  "message": "zifl"
 }
 
 ###
+### Bearer Token für die Anwendung holen
 POST http://keycloak.szut.dev/auth/realms/szut/protocol/openid-connect/token
 Content-Type: application/x-www-form-urlencoded
 
-grant_type=password&client_id=employee-management-service&username=user&password=test
+grant_type = password &
+client_id = employee-management-service &
+username = user &
+password = test
+
+###
+### Create new project -> Vorher den Bearer Token holen und oben als Token setzen
+POST http://localhost:8080/project
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "description": "Neues Projekt",
+  "startDate": "2025-10-20T09:00:00Z",
+  "endDate": "2026-03-01T17:00:00Z",
+  "comment": "Initiales Projekt anlegen",
+  "customerID": 1,
+  "responsibleEmployeeID": 348,
+  "assignedEmployees": [
+    348
+  ]
+}
+
+###
+###Delete Project
+DELETE http://localhost:8080/project/3
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+### Project By ID
+GET http://localhost:8080/project/3
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+###Get all Project Info
+GET http://localhost:8080/project
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+### Delete Employee from project
+DELETE http://localhost:8080/project/2/assignedEmployee/348
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+### Employee services Token holen damit du den auf Swagger setzen kann (auf Authorize klicken und da einfügen. Dann kannste da direkt testen. also den Employee service nicht deinen.)
+
+POST http://keycloak.szut.dev/auth/realms/szut/protocol/openid-connect/token
+Content-Type: application/x-www-form-urlencoded
+
+grant_type = password &
+client_id = employee-management-service &
+username = user &
+password = test
+
+###
+###

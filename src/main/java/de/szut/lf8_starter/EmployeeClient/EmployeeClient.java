@@ -1,5 +1,8 @@
 package de.szut.lf8_starter.EmployeeClient;
-import org.springframework.http.*;
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -9,7 +12,7 @@ public class EmployeeClient {
 
     private final RestTemplate restTemplate;
     private final AuthClient authClient;
-    private static final String BASE_URL = "https://employee.szut.dev/api/v1/employees";
+    private static final String BASE_URL = "https://employee.szut.dev/employees";
 
     public EmployeeClient(AuthClient authClient) {
         this.restTemplate = new RestTemplate();

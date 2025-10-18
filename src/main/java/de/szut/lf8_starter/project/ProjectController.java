@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
+@RequestMapping(value = "/project")
 public class ProjectController {
     private final ProjectService service;
     private final ProjectMapper mapper;
@@ -18,8 +19,9 @@ public class ProjectController {
         this.mapper = mapper;
     }
 
+
     @PostMapping
-    public ProjectGetDto create(ProjectCreateDto dto) throws Exception {
+    public ProjectGetDto create(@RequestBody ProjectCreateDto dto) throws Exception {
         ProjectEntity entity = this.mapper.mapCreateDtoToEntity(dto);
         entity = this.service.create(entity);
         return this.mapper.mapToGetProjectDto(entity);
@@ -34,25 +36,49 @@ public class ProjectController {
                 .collect(Collectors.toList());
     }
 
-    @GetMapping("projects/{ProjectID}")
-    public ProjectEntity getById(@PathVariable Long id) throws Exception {
-        return this.service.getById(id);
+    @GetMapping("/{projectID}")
+    public ProjectGetDto getById(@PathVariable Long projectID) throws Exception {
+        var entity = this.service.getById(projectID);
+        if (entity == null) {
+            throw new ResourceNotFoundException("Project with ID " + projectID + " not found");
+        } else {
+            return this.mapper.mapToGetProjectDto(entity);
+        }
     }
 
-    @DeleteMapping("/{ProjectID}")
-    public void delete(@PathVariable Long id){
-        var entity = this.service.getById(id);
+    @DeleteMapping("/{projectID}")
+    public void delete(@PathVariable Long projectID) {
+        var entity = this.service.getById(projectID);
         if (entity == null) {
-            throw new ResourceNotFoundException("HelloEntity not found on id = " + id);
+            throw new ResourceNotFoundException("ProjectEntity not found on id = " + projectID);
         } else {
             this.service.delete(entity.getId());
         }
     }
 
-    @GetMapping("/projects/{ProjectID}/employees")
-    public void getEmployeesByProjectID(){
+    @DeleteMapping("/{projectID}/assignedEmployee/{employeeID}")
+    public void deleteAssignedEmployeeFromProject(@PathVariable Long projectID, @PathVariable Long employeeID) {
+        var projectEntity = this.service.getById(projectID);
+        if (projectEntity == null) {
+            throw new IllegalArgumentException("ProjectID not found");
+        }
+        boolean found = false;
+        for (Long id : projectEntity.getAssingedEmployees()) {
+            if (id.equals(employeeID)) {
+                found = true;
+            }
+        }
 
+        if (!found) {
+            throw new IllegalArgumentException("Employee not found");
+        }
+        this.service.deleteAssingedEmployeeFromProject(projectEntity, employeeID);
     }
 
+
+    @GetMapping("/{projectID}/employees")
+    public void getEmployeesByProjectID() {
+
+    }
 
 }

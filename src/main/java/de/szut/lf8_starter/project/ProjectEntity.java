@@ -2,13 +2,13 @@ package de.szut.lf8_starter.project;
 
 import de.szut.lf8_starter.customer.CustomerEntity;
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Date;
 import java.util.List;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Data
 @Setter

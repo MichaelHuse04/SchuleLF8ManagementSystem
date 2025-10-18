@@ -14,7 +14,10 @@ public class ProjectMapper {
     }
 
     public ProjectGetDto mapToGetProjectDto(ProjectEntity projectEntity) {
-        return new ProjectGetDto(projectEntity.getId());
+        return new ProjectGetDto(projectEntity.getId(), projectEntity.getDescription(), projectEntity.getStartDate(),
+                projectEntity.getEndDate(), projectEntity.getRealEndDate(), projectEntity.getComment(),
+                projectEntity.getCustomer().getId(), projectEntity.getResponsibleEmployeeId(),
+                projectEntity.getAssingedEmployees());
     }
 
     public ProjectEntity mapCreateDtoToEntity(ProjectCreateDto dto) throws Exception {
@@ -24,7 +27,7 @@ public class ProjectMapper {
         entity.setEndDate(dto.getEndDate());
         entity.setComment(dto.getComment());
 
-        if (dto.getCustomerID() != null){
+        if (dto.getCustomerID() != null) {
             CustomerEntity customerEntity = new CustomerEntity();
             customerEntity.setId(dto.getCustomerID());
             entity.setCustomer(customerEntity);

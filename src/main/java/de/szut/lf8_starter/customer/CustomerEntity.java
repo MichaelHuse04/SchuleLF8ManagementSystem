@@ -1,10 +1,11 @@
 package de.szut.lf8_starter.customer;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
+
+@NoArgsConstructor
+@AllArgsConstructor
 @Setter
 @Getter
 @Entity
