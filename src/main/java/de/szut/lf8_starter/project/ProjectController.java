@@ -1,7 +1,9 @@
 package de.szut.lf8_starter.project;
 
+import de.szut.lf8_starter.employee.skill.EmployeeSkillEntity;
 import de.szut.lf8_starter.exceptionHandling.ResourceNotFoundException;
 import de.szut.lf8_starter.project.dto.ProjectCreateDto;
+import de.szut.lf8_starter.project.dto.ProjectEmployeeGetAllDto;
 import de.szut.lf8_starter.project.dto.ProjectGetDto;
 import org.springframework.web.bind.annotation.*;
 
@@ -62,23 +64,27 @@ public class ProjectController {
         if (projectEntity == null) {
             throw new IllegalArgumentException("ProjectID not found");
         }
-        boolean found = false;
-        for (Long id : projectEntity.getAssingedEmployees()) {
-            if (id.equals(employeeID)) {
-                found = true;
+        EmployeeSkillEntity employeeSkillEntity = null;
+        for (EmployeeSkillEntity entity : projectEntity.getEmployeeSkills()) {
+            if (entity.getEmployeeId().equals(employeeID)) {
+                employeeSkillEntity = entity;
             }
         }
 
-        if (!found) {
+        if (employeeSkillEntity == null) {
             throw new IllegalArgumentException("Employee not found");
         }
-        this.service.deleteAssingedEmployeeFromProject(projectEntity, employeeID);
+        this.service.deleteAssignedEmployeeFromProject(employeeSkillEntity, projectEntity);
     }
 
 
     @GetMapping("/{projectID}/employees")
-    public void getEmployeesByProjectID() {
-
+    public ProjectEmployeeGetAllDto getEmployeesByProjectID(@PathVariable Long projectID) {
+        var projectEntity = this.service.getById(projectID);
+        if (projectEntity == null) {
+            throw new IllegalArgumentException("ProjectID not found");
+        }
+        return this.service.getAllAssignedEmployees(projectEntity);
     }
 
 }

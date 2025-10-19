@@ -1,6 +1,7 @@
 package de.szut.lf8_starter.project;
 
 import de.szut.lf8_starter.customer.CustomerEntity;
+import de.szut.lf8_starter.employee.skill.EmployeeSkillEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -35,13 +36,7 @@ public class ProjectEntity {
 
     private Long responsibleEmployeeId;
 
-    @ElementCollection
-    @CollectionTable(
-            name = "project_employees",
-            joinColumns = @JoinColumn(name = "projectID")
-    )
-    @Column(name = "employee_number")
-    private List<Long> assingedEmployees;
-
-
+    @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
+    @JoinColumn(name = "project_id")
+    private List<EmployeeSkillEntity> employeeSkills;
 }

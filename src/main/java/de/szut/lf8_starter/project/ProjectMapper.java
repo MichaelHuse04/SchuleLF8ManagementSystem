@@ -1,9 +1,14 @@
 package de.szut.lf8_starter.project;
 
 import de.szut.lf8_starter.customer.CustomerEntity;
+import de.szut.lf8_starter.employee.skill.EmployeeSkillDto;
+import de.szut.lf8_starter.employee.skill.EmployeeSkillEntity;
 import de.szut.lf8_starter.project.dto.ProjectCreateDto;
 import de.szut.lf8_starter.project.dto.ProjectGetDto;
 import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ProjectMapper {
@@ -14,10 +19,14 @@ public class ProjectMapper {
     }
 
     public ProjectGetDto mapToGetProjectDto(ProjectEntity projectEntity) {
+        List<EmployeeSkillDto> skillDtos = new ArrayList<>();
+        for(EmployeeSkillEntity employeeSkillEntity : projectEntity.getEmployeeSkills()){
+            skillDtos.add(new EmployeeSkillDto(employeeSkillEntity.getId(),employeeSkillEntity.getSkill(),employeeSkillEntity.getEmployeeId()));
+        }
         return new ProjectGetDto(projectEntity.getId(), projectEntity.getDescription(), projectEntity.getStartDate(),
                 projectEntity.getEndDate(), projectEntity.getRealEndDate(), projectEntity.getComment(),
                 projectEntity.getCustomer().getId(), projectEntity.getResponsibleEmployeeId(),
-                projectEntity.getAssingedEmployees());
+                skillDtos);
     }
 
     public ProjectEntity mapCreateDtoToEntity(ProjectCreateDto dto) throws Exception {
@@ -34,8 +43,11 @@ public class ProjectMapper {
         }
 
         entity.setResponsibleEmployeeId(dto.getResponsibleEmployeeID());
-        entity.setAssingedEmployees(dto.getAssignedEmployees());
-
+        List<EmployeeSkillEntity> employeeSkillEntities = new ArrayList<>();
+        for (EmployeeSkillDto employeeSkillDto: dto.getAssignedEmployees()){
+            employeeSkillEntities.add(new EmployeeSkillEntity(employeeSkillDto.getId(),employeeSkillDto.getEmployeeId(), employeeSkillDto.getSkill()));
+        }
+        entity.setEmployeeSkills(employeeSkillEntities);
         return entity;
     }
 }

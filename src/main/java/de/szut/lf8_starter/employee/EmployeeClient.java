@@ -1,8 +1,10 @@
-package de.szut.lf8_starter.EmployeeClient;
+package de.szut.lf8_starter.employee;
 
+import de.szut.lf8_starter.employee.dto.EmployeeNameAndSkillDataDto;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
@@ -38,5 +40,24 @@ public class EmployeeClient {
         } catch (HttpClientErrorException e) {
             throw new RuntimeException("Fehler beim Employee-Service: " + e.getStatusCode(), e);
         }
+    }
+
+    public EmployeeNameAndSkillDataDto getSkillForEmployee(Long employeeId) {
+        String token = authClient.fetchAccessToken();
+        String url = BASE_URL + "/" + employeeId + "/qualifications";
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.set("Authorization", "Bearer " + token);
+
+        HttpEntity<Void> request = new HttpEntity<>(headers);
+
+        ResponseEntity<EmployeeNameAndSkillDataDto> response = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                request,
+                EmployeeNameAndSkillDataDto.class
+        );
+
+        return response.getBody();
     }
 }

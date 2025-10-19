@@ -2,6 +2,7 @@ package de.szut.lf8_starter.config;
 
 import de.szut.lf8_starter.customer.CustomerEntity;
 import de.szut.lf8_starter.customer.CustomerRepository;
+import de.szut.lf8_starter.employee.skill.EmployeeSkillEntity;
 import de.szut.lf8_starter.hello.HelloEntity;
 import de.szut.lf8_starter.hello.HelloRepository;
 import de.szut.lf8_starter.project.ProjectEntity;
@@ -38,18 +39,28 @@ public class SampleDataCreator implements ApplicationRunner {
         repository.save(new HelloEntity("FooBar"));
         CustomerEntity customer = new CustomerEntity(1L, "Karsten", "Meier", "testmail");
         customerRepository.save(customer);
-        List<Long> assingedEmployees = new ArrayList<>();
-        assingedEmployees.add(348L);
         LocalDate now = LocalDate.now();
         LocalDate tomorrow = now.plusDays(1);
+        EmployeeSkillEntity entity = new EmployeeSkillEntity(1L, 348L, "toll");
+        EmployeeSkillEntity entity2 = new EmployeeSkillEntity(2L, 349L, "bester");
+        EmployeeSkillEntity entity3 = new EmployeeSkillEntity(3L, 323L, "spieler");
+        EmployeeSkillEntity entity4 = new EmployeeSkillEntity(4L, 312312321123L, "jemals");
+        EmployeeSkillEntity entity5 = new EmployeeSkillEntity(5L, 34L, "ich");
+        List<EmployeeSkillEntity> employees = new ArrayList<>();
+        employees.add(entity);
+        List<EmployeeSkillEntity> employees2 = new ArrayList<>();
+        employees2.add(entity2);
+        employees2.add(entity3);
+        employees2.add(entity4);
+        employees2.add(entity5);
         projectRepository.save(new ProjectEntity(1L, "Project 1",
                 Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()),
                 Date.from(tomorrow.atStartOfDay(ZoneId.systemDefault()).toInstant()),
-                null, "Kommentar1", customer, 348L, assingedEmployees));
+                null, "Kommentar1", customer, 348L, employees));
         projectRepository.save(new ProjectEntity(2L, "Project 2",
                 Date.from(now.atStartOfDay(ZoneId.systemDefault()).toInstant()),
                 Date.from(tomorrow.atStartOfDay(ZoneId.systemDefault()).toInstant()),
-                null, "Kommentar2", customer, 348L, assingedEmployees));
+                null, "Kommentar2", customer, 348L, employees2));
     }
 
     @Bean

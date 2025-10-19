@@ -1,6 +1,7 @@
 package de.szut.lf8_starter.project.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import de.szut.lf8_starter.employee.skill.EmployeeSkillDto;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,10 +27,10 @@ public class ProjectCreateDto {
     @NotNull
     private Long responsibleEmployeeID;
 
-    private List<Long> assignedEmployees;
+    private List<EmployeeSkillDto> assignedEmployees;
 
     @JsonCreator
-    public ProjectCreateDto(String description, Date startDate, Date endDate, String comment, Long responsibleEmployeeID, Long customerID, List<Long> assignedEmployees) {
+    public ProjectCreateDto(String description, Date startDate, Date endDate, String comment, Long responsibleEmployeeID, Long customerID, List<EmployeeSkillDto> assignedEmployees) {
         this.description = description;
         this.startDate = startDate;
         this.endDate = endDate;

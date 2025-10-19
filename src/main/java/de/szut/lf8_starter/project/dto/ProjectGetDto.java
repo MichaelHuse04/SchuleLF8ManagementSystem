@@ -1,13 +1,16 @@
 package de.szut.lf8_starter.project.dto;
 
+import de.szut.lf8_starter.employee.skill.EmployeeSkillDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
 import java.util.List;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
 public class ProjectGetDto {
@@ -27,6 +30,6 @@ public class ProjectGetDto {
 
     private Long responsibleEmployeeId;
 
-    private List<Long> assingedEmployees;
+    private List<EmployeeSkillDto> assignedEmployees;
 
 }

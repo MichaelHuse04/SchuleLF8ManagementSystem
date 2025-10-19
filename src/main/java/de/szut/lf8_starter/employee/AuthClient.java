@@ -1,4 +1,4 @@
-package de.szut.lf8_starter.EmployeeClient;
+package de.szut.lf8_starter.employee;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
