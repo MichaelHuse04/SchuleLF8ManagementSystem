@@ -3,7 +3,6 @@ package de.szut.lf8_starter.project;
 import de.szut.lf8_starter.employee.EmployeeClient;
 import de.szut.lf8_starter.customer.CustomerEntity;
 import de.szut.lf8_starter.customer.CustomerRepository;
-import de.szut.lf8_starter.employee.dto.EmployeeNameAndSkillDataDto;
 import de.szut.lf8_starter.employee.skill.EmployeeSkillEntity;
 import de.szut.lf8_starter.employee.skill.EmployeeSkillRepository;
 import de.szut.lf8_starter.exceptionHandling.ResourceNotFoundException;
@@ -13,6 +12,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ProjectService {
@@ -90,5 +90,46 @@ public class ProjectService {
         }
 
         return projectEmployeeGetAllDto;
+    }
+
+    public ProjectEntity update(ProjectEntity projectEntity) {
+
+        if (projectEntity.getCustomer() == null) {
+            throw new IllegalArgumentException("CustomerID cant be null");
+        }
+        if (!customerRepository.existsById(projectEntity.getCustomer().getId())) {
+            throw new IllegalArgumentException("CustomerID " + projectEntity.getCustomer().getId() + " doesnt exists");
+        }
+
+        if (!employeeClient.existsById(projectEntity.getResponsibleEmployeeId())) {
+            throw new IllegalArgumentException("Responsible Employee not found");
+        }
+
+        for (EmployeeSkillEntity entity : projectEntity.getEmployeeSkills()) {
+            Long id = entity.getEmployeeId();
+            if (!employeeClient.existsById(id)) {
+                throw new IllegalArgumentException("Employee not found");
+            }
+        }
+
+        Optional<ProjectEntity> optionalProjectEntry = this.projectRepository.findById(projectEntity.getId());
+        if (optionalProjectEntry.isEmpty()) {
+            return null;
+        }
+
+        ProjectEntity updatedProject = optionalProjectEntry.get();
+
+        updatedProject.setDescription(projectEntity.getDescription());
+        updatedProject.setStartDate(projectEntity.getStartDate());
+        updatedProject.setEndDate(projectEntity.getEndDate());
+        updatedProject.setRealEndDate(projectEntity.getRealEndDate());
+        updatedProject.setComment(projectEntity.getComment());
+        updatedProject.getEmployeeSkills().clear();
+        updatedProject.getEmployeeSkills().addAll(projectEntity.getEmployeeSkills());
+        updatedProject.setCustomer(customerRepository.getReferenceById(projectEntity.getCustomer().getId()));
+
+        this.projectRepository.save(updatedProject);
+        return updatedProject;
+
     }
 }

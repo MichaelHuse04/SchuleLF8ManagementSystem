@@ -19,6 +19,8 @@ public class ProjectCreateDto {
 
     private Date endDate;
 
+    private Date realEndDate;
+
     private String comment;
 
     @NotNull
@@ -38,5 +40,6 @@ public class ProjectCreateDto {
         this.customerID = customerID;
         this.responsibleEmployeeID = responsibleEmployeeID;
         this.assignedEmployees = assignedEmployees;
+        this.realEndDate = null;
     }
 }

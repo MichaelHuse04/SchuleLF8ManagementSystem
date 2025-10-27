@@ -1,4 +1,4 @@
-@token = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUFQ0dldiNno5MnlQWk1EWnBqT1U0RjFVN0lwNi1ELUlqQWVGczJPbGU0In0.eyJleHAiOjE3NjA4ODkzMTQsImlhdCI6MTc2MDg4NTcxNCwianRpIjoiZDJlOTM5ZjEtZWFhYi00MThjLTg1NzItNjhiZGEzYTcwMzU4IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zenV0LmRldi9hdXRoL3JlYWxtcy9zenV0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU1NDZjZDIxLTk4NTQtNDMyZi1hNDY3LTRkZTNlZWRmNTg4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVtcGxveWVlLW1hbmFnZW1lbnQtc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiI4NDIwN2MzOC1hYTMzLTQ5MGQtODM1ZS0wYThkYzE2MDhhOGQiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicHJvZHVjdF9vd25lciIsIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zenV0IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIifQ.CxnHnSls09QRihDTEGwtpCw80YLVpik-qGCqPCdmfUPHo66u2DaE_EagMoxd8Mx1skzBAuGIqAUBtUNaFeY4BPw8oxkU1-kCDo6h40TEDlZOM7XeQ7fCN1OzDygMWEOpLnB5Tbfl2UFitpUl9CAYysowuUzkOR5D4qboG2aVwmWSIqIHjsQDoglFg3y5MPENeEThH6Dcm-HdjUrbDueSxK0MBQw1GbboHZGGqYFjUqp5vC6qAMt2KStk1Wavns9g9H2HYIQxaa3tukzdLc6mNVJgT0tG88yRxe3nl19MyKvQfHBwDvklywhVJtQHTqbvTxkk0TjnNwMtOeAUMH-G_g
+@token = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUFQ0dldiNno5MnlQWk1EWnBqT1U0RjFVN0lwNi1ELUlqQWVGczJPbGU0In0.eyJleHAiOjE3NjE2MDQwNTIsImlhdCI6MTc2MTYwMDQ1MiwianRpIjoiMDNhNDY2N2QtZjAxOS00MDk2LTk3ZGItYzkzNDk1NWE0ZTFlIiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zenV0LmRldi9hdXRoL3JlYWxtcy9zenV0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU1NDZjZDIxLTk4NTQtNDMyZi1hNDY3LTRkZTNlZWRmNTg4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVtcGxveWVlLW1hbmFnZW1lbnQtc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiJkZWRmMTRiMi05MzEyLTRkMTgtYTQ0ZS1hNDU2NWYxZThlMTYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicHJvZHVjdF9vd25lciIsIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zenV0IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIifQ.KOG3_AdXL7lcZ79B5sz0JPYGta4AZMNY-A6UD5OkH3K66I1jus9SV-27-dkOWMC4DkVZMI2no1HTFPph-eTcs_CeMOHmmHCAYXXHYvVmauxHmRtycU87c5MJ10vRzjWCiC95AtE_ljVnI0M6U9t-3hM5t6-1pyFdEIlRVVji-n3bvbNLYOKdhKwAmOw8xw6NZq7dRiZw0wuStsvicgQ7OXQ08CzXCy6XFEHNLuUZS_xXwsu21wLgCgVdtPTLOjaTaf3FiDmxWc1hH4vnDxtGyX0HfssqHaIGQ3pGRxalME9RrMkqp-3rG6Z6Plwje5iY9K-kKMqt9zqK7PzgKNNKmw
 
 ###
 GET localhost:8080/roles
@@ -58,7 +58,7 @@ Authorization: Bearer {{token}}
 
 ###
 ### Project By ID
-GET http://localhost:8080/project/3
+GET http://localhost:8080/project/4
 Accept: application/json
 Content-Type: application/json
 Authorization: Bearer {{token}}
@@ -84,6 +84,28 @@ Accept: application/json
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
+###
+### update Project
+PUT http://localhost:8080/project/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "description": "Neues Projekt",
+  "startDate": "2025-10-20T09:00:00Z",
+  "endDate": "2026-03-01T17:00:00Z",
+  "realEndDate": "2027-03-01T17:00:00Z",
+  "comment": "Initiales Projekt anlegen",
+  "customerID": 1,
+  "responsibleEmployeeID": 348,
+  "assignedEmployees": [
+    {
+      "employeeId": 348,
+      "skill": "Toller Skill"
+    }
+  ]
+}
 ###
 ### Employee services Token holen damit du den auf Swagger setzen kann (auf Authorize klicken und da einfügen. Dann kannste da direkt testen. also den Employee service nicht deinen.)
 

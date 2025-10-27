@@ -87,4 +87,18 @@ public class ProjectController {
         return this.service.getAllAssignedEmployees(projectEntity);
     }
 
+    @PutMapping("/{projectId}")
+    public ProjectGetDto updateProjectById(@PathVariable Long projectId, @RequestBody ProjectCreateDto dto) {
+        ProjectEntity projectEntity = this.service.getById(projectId);
+        if (projectEntity == null) {
+            throw new IllegalArgumentException("Project with id " + projectId + " not found");
+        }
+
+        ProjectEntity entity = this.mapper.mapProjectCreateDtoAndIdToProjectEntity(dto, projectId);
+
+        this.service.update(entity);
+
+        return this.mapper.mapToGetProjectDto(entity);
+    }
+
 }
