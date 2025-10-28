@@ -132,4 +132,66 @@ public class ProjectService {
         return updatedProject;
 
     }
+
+    public List<ProjectEntity> getProjectsByEmployeeId(Long employeeId) {
+        if (!employeeClient.existsById(employeeId)) {
+            throw new ResourceNotFoundException("Employee with ID " + employeeId + " not found");
+        }
+
+        List<ProjectEntity> allProjects = projectRepository.findAll();
+        List<ProjectEntity> employeeProjects = new ArrayList<>();
+
+        for (ProjectEntity project : allProjects) {
+            // Prüfe, ob der Mitarbeiter der verantwortliche Mitarbeiter ist
+            if (project.getResponsibleEmployeeId().equals(employeeId)) {
+                employeeProjects.add(project);
+                continue;
+            }
+
+            // Prüfe, ob der Mitarbeiter in den zugewiesenen Mitarbeitern ist
+            for (EmployeeSkillEntity skill : project.getEmployeeSkills()) {
+                if (skill.getEmployeeId().equals(employeeId)) {
+                    employeeProjects.add(project);
+                    break;
+                }
+            }
+        }
+
+        return employeeProjects;
+    }
+
+    public void addEmployeeWithSkill(Long projectId, Long employeeId, String skill) {
+        ProjectEntity project = projectRepository.findById(projectId)
+                .orElseThrow(() -> new ResourceNotFoundException("Project with ID " + projectId + " not found"));
+
+        // Check if employee exists
+        if (!employeeClient.existsById(employeeId)) {
+            throw new IllegalArgumentException("Employee with ID " + employeeId + " does not exist");
+        }
+
+        // Check if employee is already assigned
+        boolean isEmployeeAlreadyAssigned = project.getEmployeeSkills().stream()
+                .anyMatch(es -> es.getEmployeeId().equals(employeeId));
+
+        if (isEmployeeAlreadyAssigned) {
+            throw new IllegalArgumentException("Employee is already assigned to this project");
+        }
+
+        // Check employee qualification
+        var employeeSkillData = employeeClient.getSkillForEmployee(employeeId);
+        boolean hasRequiredSkill = employeeSkillData.getSkillSet().stream()
+                .anyMatch(qualification -> qualification.getSkill().equals(skill));
+
+        if (!hasRequiredSkill) {
+            throw new IllegalArgumentException("Employee does not have the required qualification: " + skill);
+        }
+
+        // Create new EmployeeSkillEntity and add it to the project
+        EmployeeSkillEntity employeeSkill = new EmployeeSkillEntity();
+        employeeSkill.setEmployeeId(employeeId);
+        employeeSkill.setSkill(skill);
+
+        project.getEmployeeSkills().add(employeeSkill);
+        projectRepository.save(project);
+    }
 }
