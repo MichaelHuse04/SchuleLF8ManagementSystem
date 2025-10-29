@@ -1,4 +1,4 @@
-@token = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUFQ0dldiNno5MnlQWk1EWnBqT1U0RjFVN0lwNi1ELUlqQWVGczJPbGU0In0.eyJleHAiOjE3NjE2MDQwNTIsImlhdCI6MTc2MTYwMDQ1MiwianRpIjoiMDNhNDY2N2QtZjAxOS00MDk2LTk3ZGItYzkzNDk1NWE0ZTFlIiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zenV0LmRldi9hdXRoL3JlYWxtcy9zenV0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU1NDZjZDIxLTk4NTQtNDMyZi1hNDY3LTRkZTNlZWRmNTg4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVtcGxveWVlLW1hbmFnZW1lbnQtc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiJkZWRmMTRiMi05MzEyLTRkMTgtYTQ0ZS1hNDU2NWYxZThlMTYiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicHJvZHVjdF9vd25lciIsIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zenV0IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIifQ.KOG3_AdXL7lcZ79B5sz0JPYGta4AZMNY-A6UD5OkH3K66I1jus9SV-27-dkOWMC4DkVZMI2no1HTFPph-eTcs_CeMOHmmHCAYXXHYvVmauxHmRtycU87c5MJ10vRzjWCiC95AtE_ljVnI0M6U9t-3hM5t6-1pyFdEIlRVVji-n3bvbNLYOKdhKwAmOw8xw6NZq7dRiZw0wuStsvicgQ7OXQ08CzXCy6XFEHNLuUZS_xXwsu21wLgCgVdtPTLOjaTaf3FiDmxWc1hH4vnDxtGyX0HfssqHaIGQ3pGRxalME9RrMkqp-3rG6Z6Plwje5iY9K-kKMqt9zqK7PzgKNNKmw
+@token = eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIzUFQ0dldiNno5MnlQWk1EWnBqT1U0RjFVN0lwNi1ELUlqQWVGczJPbGU0In0.eyJleHAiOjE3NjE3MjY5NTcsImlhdCI6MTc2MTcyMzM1NywianRpIjoiZWU3NDUwNjEtMjg2OC00YjQ4LThiMzctZjkyM2Q4NTEwMzk2IiwiaXNzIjoiaHR0cHM6Ly9rZXljbG9hay5zenV0LmRldi9hdXRoL3JlYWxtcy9zenV0IiwiYXVkIjoiYWNjb3VudCIsInN1YiI6IjU1NDZjZDIxLTk4NTQtNDMyZi1hNDY3LTRkZTNlZWRmNTg4OSIsInR5cCI6IkJlYXJlciIsImF6cCI6ImVtcGxveWVlLW1hbmFnZW1lbnQtc2VydmljZSIsInNlc3Npb25fc3RhdGUiOiIzMTQyODI0OS00MmY0LTRiZmItYWU2Zi04NmU1NTUyMTdjYTAiLCJhY3IiOiIxIiwiYWxsb3dlZC1vcmlnaW5zIjpbImh0dHA6Ly9sb2NhbGhvc3Q6NDIwMCJdLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsicHJvZHVjdF9vd25lciIsIm9mZmxpbmVfYWNjZXNzIiwiZGVmYXVsdC1yb2xlcy1zenV0IiwidW1hX2F1dGhvcml6YXRpb24iLCJ1c2VyIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJlbWFpbCBwcm9maWxlIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsInByZWZlcnJlZF91c2VybmFtZSI6InVzZXIifQ.Cky_DbKml82XTB_tX8vPDXThgknLtQ652EA198U5sg2KM4MZVZGVCr3DmWn2okAW7MPIyTVOZ7yHpSbgxsMAPsaQjgOnbWSJ07o93NXFBcqmSO3WHopKDfIWD5d3I6qfnHP7TpoMmbmcaEiDXus2tKrIYXfRmH7SNnDILOiWTnuVi_1A2KfuiJ9Z36MoXGkWbVPLXgvOZ2mVoQjmKquLM0z0EFa-keJ_FLrKiPukOTwGx59ZiI9nEWC7qEQe8IvMhrOptNEy_CIwm2Iz2HNhA1Sp-m2L0jz9sH4vi2RnyZVkab5nQhO_QJgAWnkE9FD2u_O-6phNqWz_KPOO4Lm_zQ
 
 ###
 GET localhost:8080/roles
@@ -106,9 +106,72 @@ Authorization: Bearer {{token}}
     }
   ]
 }
+
+###
+### asign employee to project with skill
+POST http://localhost:8080/project/1/employee/350/skill/Kotlin
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
 ###
 ### Employee services Token holen damit du den auf Swagger setzen kann (auf Authorize klicken und da einfügen. Dann kannste da direkt testen. also den Employee service nicht deinen.)
 
+
+
+
+
+
+### find all Customers
+GET http://localhost:8080/customer
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+
+### find Customer by id
+GET http://localhost:8080/customer/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+
+### add Customer
+POST http://localhost:8080/customer
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "firstName": "Michael",
+  "lastName": "Huse",
+  "email": "testeeeee"
+}
+
+###
+
+### delete Customer by id
+DELETE http://localhost:8080/customer/1
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+###
+
+### update Customer by id
+PUT http://localhost:8080/customer/3
+Accept: application/json
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "firstName": "Michaelsssssssssss",
+  "lastName": "Husesssssssssss",
+  "email": "testeeeeesssssssssssssss"
+}
+###
 POST http://keycloak.szut.dev/auth/realms/szut/protocol/openid-connect/token
 Content-Type: application/x-www-form-urlencoded
 
